@@ -1,3 +1,21 @@
+:root {
+  --brand-color1: #9e6efe;
+
+  --dark-10: #262626;
+  --dark-20: #414141;
+  --dark-30: #737373;
+
+  --white-10: #f9f9f9;
+  --white-20: #ffffff;
+}
+
+body {
+  google: {
+    families: [ "Dm Sams Web:300,400,500,700", "Poppins Web:300,400,500",
+      "sans-serif"];
+  }
+}
+
 .App {
   text-align: center;
 }
