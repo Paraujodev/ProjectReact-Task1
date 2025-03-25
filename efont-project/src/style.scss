@@ -7,41 +7,15 @@
         --color-dark-20: #414141;
         --color-dark-30: #737373;
         --color-dark-40: #FFFFFF;
+        --color-backgroud-page: #cfcff0;
         
     }
 
     text-decoration: none;
     list-style: none;
-            
+               
+}
 
-    .navBar{
-        font-family: 'Poppins', sans-serif;
-        display: flex;
-        align-items: start;
-        flex-direction: column;
-        background: #FFFFFF;
-        border: 1px solid #262626;
-        border-radius: 50px;
-        width: 30%;
-        // height: auto;
-        gap: 20px;
-
-        .imageLogo{
-            width: 104px;        
-            margin: 10px; 
-        }
-
-        .ulNavbar{
-            display: flex;
-            flex-direction: column;
-           
-            a{
-                padding-bottom: 20px;
-            }
-
-            img{
-                width: 22px;
-            }
-        }
-    }
+.backgroud-page{
+    background-color:#cfcff0;
 }
