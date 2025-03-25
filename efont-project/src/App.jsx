@@ -1,12 +1,11 @@
-import Navbar from '../src/components/dashboard/navbar.jsx';
-import '../src/style.scss'
-import Wallet from './components/wallet/walletPage.jsx';
+import './../src/style.scss'
+import Dashboard from './pages/dashboard/dashboardPage.jsx';
 
 function App() {
   
   return (
     <div className="backgroud-page">
-      <Navbar />
+      <Dashboard />
     </div>
   )
 }
