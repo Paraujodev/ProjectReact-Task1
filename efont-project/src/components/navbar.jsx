@@ -26,7 +26,7 @@ export default function Navbar(){
                      </a>
                  </li>
                  <li>
-                     <a href='' to ="/transactions"> <img src= {Transations} alt='logo transações'/>
+                     <a href= "/transactions"> <img src= {Transations} alt='logo transações'/>
                          <span>Transações</span>
                      </a>
                  </li>

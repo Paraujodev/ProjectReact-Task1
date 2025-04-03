@@ -1,0 +1,35 @@
+
+
+.spaceGraphicTransactions{
+    background-color: white;
+    border-radius: 12px;
+
+    .title{
+        font-size: 1.25rem;
+        color: #272727;
+        padding: 15px 0px 0px 30px;
+    }
+
+    .dataTrasactions {
+        width: 400px;
+        padding: 10px 10px 30px 10px;
+
+        .transactionsInform{
+
+            display: flex;
+            justify-content: space-between;
+            background-color: #dfdff5;
+            border-radius: 6px;
+            margin: 20px;
+            padding: 5px;
+              
+            span{
+                font-size: 1rem;
+                font-weight: 500;
+                color: #9E6EFE;
+            }    
+            
+        }
+    }
+    
+}
