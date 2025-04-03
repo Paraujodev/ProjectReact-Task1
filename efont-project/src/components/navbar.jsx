@@ -12,7 +12,10 @@ import Logof from '../assets/power.svg';
 export default function Navbar(){
     return (
         <nav className="navBar">
-        <div><a href= "/"> <img className='imageLogo' src= {Logo} alt="Logo do Site" /></a></div>
+        <div className='imageLogo'>
+            <a href= "/"> <img src= {Logo} alt="Logo do Site" />
+            </a>
+        </div>
          <div>
              <ul className='ulNavbar'>
                  <li>

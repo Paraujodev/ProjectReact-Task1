@@ -8,6 +8,7 @@
     background: #FFFFFF;
     width: 270px;
     gap: 20px;
+    height: 100vh;
 
     .imageLogo{
         width: 104px;        
@@ -26,6 +27,7 @@
         a{
             display: flex;
             font-size: 1rem;
+            text-decoration: none;
 
             span{
                 margin-left: 12px;

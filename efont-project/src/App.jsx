@@ -5,7 +5,7 @@ function App() {
   
   return (
     <div className="backgroud-page">
-      <Dashboard />
+        <Dashboard />
     </div>
   )
 }

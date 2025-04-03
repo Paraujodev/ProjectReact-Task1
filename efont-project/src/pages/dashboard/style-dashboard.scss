@@ -1,70 +1,70 @@
 
 
 .contentDashboard{
-   display: flex;
-   
+     
+    .menuNavbar{
+        .mycontent{
+            width: 100%;
 
-    .mycontent{
-        width: 100%;
+            .headerSpace{
+                    display: flex; 
+                    align-items: center;   
+                    justify-content: space-between;
+                    margin: 20px 100px 20px 50px;        
 
-       .headerSpace{
-            display: flex; 
-            align-items: center;   
-            justify-content: space-between;
-            margin: 20px 100px 20px 50px;        
+                    h1{
+                        font-size: 1.87rem;
+                        font-weight: 500;
+                        color: #272727;
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        font-size: 1.12rem;
+                        font-weight: 500;
+                        color: #6A6969;
+                        margin-top: 0px;
+                    }
 
-            h1{
-                font-size: 1.87rem;
-                font-weight: 500;
-                color: #272727;
-                margin-bottom: 5px;
-            }
-            p{
-                font-size: 1.12rem;
-                font-weight: 500;
-                color: #6A6969;
-                margin-top: 0px;
-            }
-
-            
-
-            .headerSpaceEnd{
-                display: flex;
-                height: 40px;
-                gap: 32px;
-
-                img{
-                    border-radius: 100px;
-                    width: 24px;
-                }
-    
-                .icons {
-                    background-color: white;
-                    border-radius: 999px;
-                    width: 40px;
-                    display: flex;
-                    justify-content: center;
-                }
-
-                .dataLogin{
-                    display: flex;
-                    align-items: center;
-                    gap: 15px;
-                }
-                
-                .dataLogin img{
                     
-                    width: 42px;
-                }
 
+                    .headerSpaceEnd{
+                        display: flex;
+                        height: 40px;
+                        gap: 32px;
+
+                        img{
+                            border-radius: 100px;
+                            width: 24px;
+                        }
+            
+                        .icons {
+                            background-color: white;
+                            border-radius: 999px;
+                            width: 40px;
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        .dataLogin{
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+                        }
+                        
+                        .dataLogin img{
+                            
+                            width: 42px;
+                        }
+
+                    }
             }
-       }
 
-       .classGraphic{
-        margin: 20px 100px 20px 50px;
-        display: flex;
-        justify-content: space-between;
-       }
+            .classGraphic{
+                margin: 20px 100px 20px 50px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
     }
     
 }

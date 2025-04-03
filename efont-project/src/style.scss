@@ -8,14 +8,19 @@
         --color-dark-30: #737373;
         --color-dark-40: #FFFFFF;
         --color-backgroud-page: #cfcff0;
-        
+    }
+
+    ::after, ::before{
+        box-sizing: 0px;
     }
 
     text-decoration: none;
     list-style: none;
+    margin: 0px;
                
 }
 
 .backgroud-page{
     background-color:#dfdff5;
+    height: 100vh;
 }
