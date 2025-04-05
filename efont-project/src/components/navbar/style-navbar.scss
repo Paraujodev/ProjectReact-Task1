@@ -1,0 +1,90 @@
+
+
+.navBar{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    background: #FFFFFF;
+    width: 270px;
+    gap: 20px;
+    height: 100vh;
+
+    .imageLogo{
+        width: 104px;        
+        margin: 10px;
+        padding:50px 40px 0px 40px;
+    }
+
+    .ulNavbar{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        padding: 0px;
+        margin: 0px 0px 0px 20px;
+
+        li{
+            margin: 20px 10px;
+            padding: 0px 0px 0px 20px;
+
+
+            a{
+                font-size: 1rem;
+                text-decoration: none;                
+                color: #262626;
+                                    
+                span{
+                    margin-left: 12px;
+                }
+            }
+
+        }
+
+        img{
+            width: 22px;
+        }
+
+        li:hover{
+            background-color: #dfdff5;
+            padding: 10px 0px;
+            margin: 10px 40px 10px 10px; 
+            border-radius: 5px;
+
+            a{
+                color: #9E6EFE;
+            }            
+
+            img{
+                margin: 0px 0px 0px 20px;
+                filter: brightness(0) saturate(100%) invert(59%) sepia(36%) saturate(7380%) hue-rotate(229deg) brightness(100%) contrast(99%);
+            }
+
+        }
+
+        .command{
+            margin-top: 10px;
+        }
+        
+        .logofPage{
+
+            li:hover{
+
+                background-color:#faa3a3;
+                padding: 10px 0px;
+                margin: 10px 40px 10px 10px; 
+                border-radius: 5px;
+
+                a{
+                    color:#ec0000;
+                }
+                img{
+                    filter: brightness(0) saturate(100%) invert(18%) sepia(100%) saturate(3150%) hue-rotate(351deg) brightness(82%) contrast(131%);
+                }
+            }
+        }
+    }
+}
+
+.navBar .active{
+
+}

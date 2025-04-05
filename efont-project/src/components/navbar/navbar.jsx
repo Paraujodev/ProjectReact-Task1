@@ -1,12 +1,12 @@
 import './style-navbar.scss'
 import React from 'react';
-import Logo from '../assets/logo.svg';
-import Transations from '../assets/cart.svg';
-import DashboardImage from '../assets/grid.svg';
-import Wallet from '../assets/save.svg';
-import Support from '../assets/users.svg';
-import Settings from '../assets/settings.svg';
-import Logof from '../assets/power.svg';
+import Logo from '../../assets/logo.svg';
+import Transations from '../../assets/cart.svg';
+import DashboardImage from '../../assets/grid.svg';
+import Wallet from '../../assets/save.svg';
+import Support from '../../assets/users.svg';
+import Settings from '../../assets/settings.svg';
+import Logof from '../../assets/power.svg';
 
 
 export default function Navbar(){
@@ -38,16 +38,20 @@ export default function Navbar(){
                          <span>Suporte</span>
                      </a>
                  </li>
-                 <li>
-                     <a href ="/settings"> <img src= {Settings} alt='logo ajustes'/>
-                         <span>Ajustes</span>
-                     </a>
-                 </li>
-                 <li>
-                     <a href ="/logof"> <img src= {Logof} alt='logo desconectar'/>
-                         <span>Desconectar</span>
-                     </a>
-                 </li>
+                 <div className='command'></div>
+                    <li>
+                        <a href ="/settings"> <img src= {Settings} alt='logo ajustes'/>
+                            <span>Ajustes</span>
+                        </a>
+                    </li>
+                <div className='logofPage'>
+                    <li>
+                        <a href ="/logof"> <img src= {Logof} alt='logo desconectar'/>
+                            <span>Desconectar</span>
+                        </a>
+                    </li>
+                 </div>
+                 
              </ul>
          </div>
      </nav>   
