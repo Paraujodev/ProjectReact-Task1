@@ -1,7 +1,12 @@
 import React from 'react';
+import './style-graphic.scss'
 
 export default function Graphic () {
     return (
-        <div><span>Meu gráfico</span></div>
+        <div className='spaceGraphicTransactions'>
+            <span>
+                Meu gráfico
+            </span>
+        </div>
     )
 }

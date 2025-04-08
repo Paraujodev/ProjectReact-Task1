@@ -13,10 +13,10 @@ export default function Header () {
             </div>
             <div className="headerSpaceEnd">
                 <div className="icons">
-                    <img src={Search} alt="Pesquisa" />
+                    <a href='#'><img src={Search} alt="Pesquisa" /></a>
                 </div>
                 <div className="icons">
-                    <img src={Bell} alt="Lembrete" />
+                    <a href='#'><img src={Bell} alt="Lembrete" /></a>
                 </div>
                 <div className="dataLogin">
                     <img src={ImageLogon} alt="Imagem de login" />

@@ -2,7 +2,7 @@
     display: flex; 
     align-items: center;   
     justify-content: space-between;
-    margin: 20px 100px 20px 50px;        
+    margin: 50px 0px;
 
     h1{
         font-size: 1.87rem;
@@ -15,9 +15,7 @@
         font-weight: 500;
         color: #6A6969;
         margin-top: 0px;
-    }
-
-    
+    }    
 
     .headerSpaceEnd{
         display: flex;
@@ -35,6 +33,7 @@
             width: 40px;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
         .dataLogin{
