@@ -1,35 +1,29 @@
 .boxMainTable{
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    margin: 20px 0px;
 
-    .titleMyTable{
-
-        span{
-            font-size: 1.25rem;
-            color: black;
-            padding: 20px;
-        }
+    h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #272727;
     }
 
-    .myMainTable{
-        
-        .table{
-          
-            margin: 20px;
+    .table{
+        width: 100%;
+        overflow-x: scroll;
 
-            th{
-                font-size: 1rem;
-                color: #272727;
-                border: none;
-            }
+        th{
+            font-size: 1rem;
+            color: #272727;
+            border: none;
+        }
 
-            td{
-                font-size: 0.87rem;
-                color: #6A6969;
-                border: none;
-            }
+        td{
+            font-size: 0.87rem;
+            color: #6A6969;
+            border: none;
         }
     }
 

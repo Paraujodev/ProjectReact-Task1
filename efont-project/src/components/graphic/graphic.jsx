@@ -4,9 +4,9 @@ import './style-graphic.scss'
 export default function Graphic () {
     return (
         <div className='spaceGraphicTransactions'>
-            <span>
-                Meu gráfico
-            </span>
+            <h2>
+                Gráfico de receitas
+            </h2>
         </div>
     )
 }

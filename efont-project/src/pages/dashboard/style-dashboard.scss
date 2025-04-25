@@ -1,37 +1,41 @@
 
+.dashboard{
+    width: 100%;
+    height: 100vh;
+    display: flex;
 
-.contentDashboard{
-     
-    .menuNavbar{
+    .mycontent{
+        width: calc(100% - 270px);
+        height: 100vh;
+        margin: 0 40px;
 
-        
-        .mycontent{
-            width: 100%;
+        .overflow {
+            height: calc(100vh - 200px);
+            min-height: 325px;
+            overflow-y: scroll;
+        }
 
-            .classGraphic{
-                display: flex;
-                justify-content: space-between;
 
-                .graphicOne{
-                    width: 100%;
-                    height: 100%;
-                    margin-bottom: 20px;
-                }
 
-                .tableOne{
-                    width: 100%;
-                    margin-bottom: 20px;
-                }
-            }
+        .classGraphic{
+            display: flex;
+            justify-content: space-between;
 
-            .dadosResumeBox{
-
-            }
-
-            .contentBox{
+            .graphicOne{
                 width: 100%;
-                border-radius: 10px;
+                height: 100%;
+                margin-bottom: 20px;
             }
+
+            .tableOne{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .contentBox{
+            width: 100%;
+            border-radius: 10px;
         }
     }
     

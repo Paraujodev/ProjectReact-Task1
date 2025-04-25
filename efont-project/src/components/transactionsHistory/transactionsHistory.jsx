@@ -1,12 +1,10 @@
 import React from 'react';
-import './style-graphicTransaction.scss'
+import './style-transactionsHistory.scss'
 
-export default function GraphicTransactions () {
+export default function transactionsHistory() {
     return (
       <div className='spaceGraphicTransactions'>
-        <div className='title'>
-          <span>Histórico de Transações</span>
-        </div>
+        <h2>Histórico de transações</h2>
         <div className='dataTrasactions'>
           <div className='transactionsInform'>
             <span>Ontem</span>

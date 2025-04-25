@@ -4,13 +4,8 @@ import './style-mainTable.scss'
 export default function MainTable(){
     return (
         <div className='boxMainTable'>
-            <div className='titleMyTable'>
-                <span>
-                    Histórico de Compradores
-                </span>
-            </div>
-            <div className="myMainTable">
-                <table class="table">
+            <h2>Histórico de compradores</h2>
+            <table className="table">
                     <thead>
                         <tr>
                         <th scope="col">ID</th>
@@ -40,9 +35,6 @@ export default function MainTable(){
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            
-
         </div>
     )
 }
