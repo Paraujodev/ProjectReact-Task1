@@ -11,7 +11,7 @@
 
         .overflow {
             height: calc(100vh - 200px);
-            min-height: 325px;
+            min-height: 385px;
             overflow-y: scroll;
         }
 
@@ -45,6 +45,15 @@
             margin: 0;
         }
     }
-    
+
+    @media(width <= 425px) {
+
+        .mycontent {
+            .overflow {
+                height: calc(100vh - 150px);
+                min-height: 0;
+            }
+        } 
+    }
 }
 

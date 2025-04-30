@@ -31,5 +31,11 @@ h2 {
     background-color:#dfdff5;
     width: 100%;
     height: 100vh;
-    min-height: 500px;
+    min-height: 600px;
+}
+
+@media (width <= 425px) {
+    .backgroud-page {
+        min-height: 0px;
+    }
 }

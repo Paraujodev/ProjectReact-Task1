@@ -37,6 +37,7 @@ export default function Navbar(){
                          <span>Suporte</span>
                      </a>
                  </li>
+                 <div className="divider"></div>
                 <li>
                     <a href ="/settings"> <img src= {Settings} alt='logo ajustes'/>
                             <span>Ajustes</span>
