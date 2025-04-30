@@ -38,5 +38,13 @@
             border-radius: 10px;
         }
     }
+
+    @media (width <= 768px) {
+        .mycontent {
+            width: calc(100% - 122px);
+            margin: 0;
+        }
+    }
     
 }
+

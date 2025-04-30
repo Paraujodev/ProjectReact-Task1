@@ -11,13 +11,12 @@ import Logof from '../../assets/power.svg';
 
 export default function Navbar(){
     return (
-        <nav className="navBar">
-        <div className='imageLogo'>
-            <a href= "/"> <img src= {Logo} alt="Logo do Site" />
-            </a>
-        </div>
-         <div>
-             <ul className='ulNavbar'>
+        <nav>
+            <div className='imageLogo'>
+                <a href= "/"> <img src= {Logo} alt="Logo do Site" />
+                </a>
+            </div>
+            <ul>
                  <li>
                      <a href ="/"> <img src= {DashboardImage} alt='logo dashboard'/>
                          <span>Dashboard</span>
@@ -38,12 +37,11 @@ export default function Navbar(){
                          <span>Suporte</span>
                      </a>
                  </li>
-                 <div className='command'></div>
-                    <li>
-                        <a href ="/settings"> <img src= {Settings} alt='logo ajustes'/>
+                <li>
+                    <a href ="/settings"> <img src= {Settings} alt='logo ajustes'/>
                             <span>Ajustes</span>
-                        </a>
-                    </li>
+                    </a>
+                </li>
                 <div className='logofPage'>
                     <li>
                         <a href ="/logof"> <img src= {Logof} alt='logo desconectar'/>
@@ -52,8 +50,7 @@ export default function Navbar(){
                     </li>
                  </div>
                  
-             </ul>
-         </div>
-     </nav>   
+            </ul>
+        </nav>   
     );
 };

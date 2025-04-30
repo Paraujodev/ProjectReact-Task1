@@ -5,7 +5,8 @@ export default function MainTable(){
     return (
         <div className='boxMainTable'>
             <h2>Histórico de compradores</h2>
-            <table className="table">
+            <div className="table-responsive">
+                <table className="table">
                     <thead>
                         <tr>
                         <th scope="col">ID</th>
@@ -35,6 +36,7 @@ export default function MainTable(){
                         </tr>
                     </tbody>
                 </table>
+            </div>
         </div>
     )
 }

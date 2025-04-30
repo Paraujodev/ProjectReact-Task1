@@ -22,4 +22,8 @@
             font-weight: 600;
         }
     }
+
+    @media (width <= 768px) {
+        margin: 10px 0;
+    }
 }

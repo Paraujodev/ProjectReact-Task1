@@ -24,9 +24,13 @@
                 font-size: 1rem;
                 font-weight: 500;
                 color: #9E6EFE;
-            }    
-            
+            }  
         }
     }
     
+    @media (width <= 500px) {
+        .transactionsInform {
+            flex-direction: column;
+        }
+    }
 }

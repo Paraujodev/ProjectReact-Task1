@@ -1,31 +1,28 @@
 
 
-.navBar{
+nav {
+    padding: 60px 40px;
     display: flex;
     align-items: start;
     flex-direction: column;
     background: #FFFFFF;
     width: 270px;
-    gap: 20px;
     height: 100vh;
     min-height: 500px;
 
-    .imageLogo{
-        width: 104px;        
-        margin: 10px;
-        padding:50px 40px 0px 40px;
+    .imageLogo {
+        margin: 0 0 60px 10px;
     }
 
-    .ulNavbar{
+    ul {
+        width: 100%;
+        padding: 0px;
         display: flex;
         flex-direction: column;
-        width: 250px;
-        padding: 0px;
-        margin: 0px 0px 0px 20px;
+        gap: 30px;
 
-        li{
-            margin: 20px 10px;
-            padding: 0px 0px 0px 20px;
+        li {
+            padding: 10px;
 
 
             a{
@@ -46,8 +43,6 @@
 
         li:hover{
             background-color: #dfdff5;
-            padding: 10px 0px;
-            margin: 10px 40px 10px 10px; 
             border-radius: 5px;
 
             a{
@@ -55,23 +50,16 @@
             }            
 
             img{
-                margin: 0px 0px 0px 20px;
                 filter: brightness(0) saturate(100%) invert(59%) sepia(36%) saturate(7380%) hue-rotate(229deg) brightness(100%) contrast(99%);
             }
 
         }
 
-        .command{
-            margin-top: 10px;
-        }
-        
         .logofPage{
 
             li:hover{
 
                 background-color:#faa3a3;
-                padding: 10px 0px;
-                margin: 10px 40px 10px 10px; 
                 border-radius: 5px;
 
                 a{
@@ -85,6 +73,21 @@
     }
 }
 
-.navBar .active{
+@media (width <= 768px) {
+    nav {
+        width: auto;
 
+        .imageLogo {
+            img {
+                width: 32px;;
+            }
+        }
+
+        li {
+            padding: 0;
+            span {
+                display: none;
+            }
+        }
+    }
 }
