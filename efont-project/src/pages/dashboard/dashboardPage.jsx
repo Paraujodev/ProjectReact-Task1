@@ -33,16 +33,16 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="row">
-              <div className="col-md-3">
+              <div className="col-lg-3">
                 <Resumebox/>
               </div>
-              <div className="col-md-3">
+              <div className="col-lg-3">
                 <Resumebox/>
               </div>
-              <div className="col-md-3">
+              <div className="col-lg-3">
                 <Resumebox/>
               </div>
-              <div className="col-md-3">
+              <div className="col-lg-3">
                 <Resumebox/>
               </div>
             </div>

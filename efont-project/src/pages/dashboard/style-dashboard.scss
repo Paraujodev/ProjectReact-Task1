@@ -39,6 +39,12 @@
         }
     }
 
+    @media (width <= 943px) {
+        .mycontent {
+            margin: 0;
+        }
+    }
+
     @media (width <= 768px) {
         .mycontent {
             width: calc(100% - 122px);
