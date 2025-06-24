@@ -44,6 +44,7 @@ export default function Graphic () {
         };
 
         dados.forEach(item => {
+            // eslint-disable-next-line no-unused-vars
             const [dia, mes] = item.data_pagamento.split('.');
 
             const meses = {
