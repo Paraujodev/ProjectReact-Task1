@@ -1,17 +1,23 @@
 nav {
-    padding: 60px 40px;
+    padding: 60px 0 0 0;
     display: flex;
     align-items: start;
     flex-direction: column;
     background: #FFFFFF;
     height: 100vh;
     min-height: 600px;
+    transition: width 0.3s ease;
+    z-index: 10;
 
-    .open {
+    ul,li,a,span {
+        transition: all 1s ease;
+    }
+
+    &.open {
         width: 270px;
 
         ul {
-            li{
+            li {
                 width: 100%;
                 padding: 10px 10px;
             }
@@ -19,52 +25,69 @@ nav {
 
         .toggle-btn {
             align-self: flex-end;
+            margin-left: 20px;
         }
 
-        span{
+        span {
             margin-left: 12px;
+        }
+
+        .imageLogo {
+            width: 120px;
+            transition: width 0.3s ease;
         }
     }
 
-    .close {
-        ul{
+    &.close {
+        width: 170px;
+
+        img {
+            height: 40px;
+        }
+
+        ul {
             li {
                 width: fit-content;
                 padding: 10px;
                 margin: 0 auto;
                 display: flex;
                 justify-content: center;
+
+                span {
+                    display: none;
+                }
             }
+        }
+
+        .imageLogo {
+            transition: width 0.3s ease;
+        }
+    }
+
+
+
+    .toggle-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin: 0 auto;
+
+        img {
+            width: 20px;
+            height: 20px;
         }
     }
 
     .imageLogo {
-        margin: 0 0 60px 10px;
+        margin: 0 0 60px 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
     }
-
-.toggle-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin: 10px 0;
-
-    img {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-.imageLogo{
-    margin: 0 0 60px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
 
     ul {
-        width: 100%;
-        padding: 0px;
+        width: 70%;
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -130,4 +153,3 @@ nav {
         }
     }
 }
-
