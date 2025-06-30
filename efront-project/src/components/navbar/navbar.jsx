@@ -9,7 +9,7 @@ import Settings from '../../assets/settings.svg';
 import Logof from '../../assets/power.svg';
 import ArrowRight from '../../assets/arrow-right.svg';
 import ArrowLeft from '../../assets/arrow-left.svg';
-import LogoMini from '../../assets/favicon.png';
+import LogoMini from '../../assets/logo_e.png';
 
 
 export default function Navbar() {
@@ -22,7 +22,7 @@ export default function Navbar() {
     return (
         <nav className={isOpen ? "open" : "close"}>
             <div className='imageLogo'>
-                <a href="/"> <img src={isOpen ? Logo : LogoMini} alt="Logo" />
+                <a href="/"> <img className='imageLogoE' src={isOpen ? Logo : LogoMini} alt="Logo" />
                 </a>
                 <button className='toggle-btn' onClick={toggleSider}>
                     <img src={isOpen ? ArrowLeft : ArrowRight} alt={isOpen ? "Fechar menu" : "Abrir menu"}
