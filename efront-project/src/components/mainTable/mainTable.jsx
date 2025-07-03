@@ -22,12 +22,12 @@ export default function MainTable() {
             .then((data) => {
                 setDados(data);
                 setLoading(false);
-            })
+            })//fechamento do then
 
             .catch((error) => {
                 console.error("Erro ao buscar dados:", error);
                 setLoading(true);
-            });
+            });//fechamento do catch
     }, []);
 
 
