@@ -8,6 +8,30 @@ nav {
     height: 100vh;
     min-height: 600px;
     position: relative;
+    box-shadow: 5px 5px 10px #0000ff82;
+    transition: width 0.5s ease;
+
+    ul {
+        li {
+            height: 40px;
+            display: flex;
+            align-items: center;
+
+            a {
+                display: flex;
+                align-items: center;
+                transition: all 0.3s ease;
+
+                span {
+                    transition: opacity 0.3s ease;
+                }
+            }
+        }
+    }
+
+    .imageLogoE{
+        transition: 0.5s;
+    }
 
     .imageLogo {
         margin: 0 0 60px 0px;
@@ -18,8 +42,10 @@ nav {
             position: absolute;
             top: 20px;
             left: 10px;
+
             img {
-                width: 25px;
+                width: 32px;
+                transition: transform 0.4s ease;
             }
         }
     }
@@ -61,14 +87,19 @@ nav {
         }
     }
 
+    .toggle-btn.rotated img {
+        transform: rotate(-180deg);
+    }
+
 
     &.open {
-        .imageLogo{
+        .imageLogo {
             img {
-            margin-left: 10px;
+                margin-left: 10px;
             }
 
         }
+
         ul {
             width: 100%;
             padding: 0px;
@@ -86,6 +117,9 @@ nav {
 
                     span {
                         margin-left: 12px;
+                        opacity: 1;
+                        width: auto;
+                        transition: opacity 0.5s ease, width 0.5s ease;
                     }
                 }
             }
@@ -97,7 +131,8 @@ nav {
     }
 
     &.close {
-        width: auto;
+        width: 120px;
+        transition: width 0.6s ease;
 
         .imageLogo {
             img {
@@ -136,7 +171,10 @@ nav {
             }
 
             span {
-                display: none;
+                opacity: 0;
+                width: 0;
+                overflow: hidden;
+                transition-delay: 0.2s;
             }
         }
     }

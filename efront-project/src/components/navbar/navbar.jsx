@@ -7,7 +7,7 @@ import Wallet from '../../assets/save.svg';
 import Support from '../../assets/users.svg';
 import Settings from '../../assets/settings.svg';
 import Logof from '../../assets/power.svg';
-import ArrowRight from '../../assets/arrow-right.svg';
+import Arrow from '../../assets/arrow.svg';
 import ArrowLeft from '../../assets/arrow-left.svg';
 import LogoMini from '../../assets/logo_e.png';
 
@@ -24,9 +24,8 @@ export default function Navbar() {
             <div className='imageLogo'>
                 <a href="/"> <img className='imageLogoE' src={isOpen ? Logo : LogoMini} alt="Logo" />
                 </a>
-                <button className='toggle-btn' onClick={toggleSider}>
-                    <img src={isOpen ? ArrowLeft : ArrowRight} alt={isOpen ? "Fechar menu" : "Abrir menu"}
-                    />
+                <button className={`toggle-btn ${isOpen ? 'rotated' : ''}`} onClick={toggleSider}>
+                    <img src={Arrow} alt="Toggle menu"/>
                 </button>
             </div>
             <ul>
