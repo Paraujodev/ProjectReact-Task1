@@ -52,24 +52,17 @@ export default function MainTable() {
                             </tr>
                         </thead>
                         <tbody>
-                            {users.map((usuario) => (
+                            {users.slice(0,10).map((usuario) => (
                                 <tr key={usuario.id}>
-                                    <td>{usuario.id}</td>
-                                    <td>{usuario.date}</td>
-                                    <td>{usuario.name}</td>
-                                    <td>{usuario.state}</td>
-                                    <td>{usuario.value}</td>
-                                    <td>{usuario.status}</td>
+                                    <td>{usuario.pedido}</td>
+                                    <td>{usuario.data}</td>
+                                    <td>{usuario.cliente}</td>
+                                    <td>{usuario.localizacao}</td>
+                                    <td>{usuario.valor}</td>
+                                    <td>{usuario.situação}</td>
                                 </tr>
                             ))}
-                            <tr>
-                                <td>#67890</td>
-                                <td>03/08/2023</td>
-                                <td>Beatriz Rodrigues</td>
-                                <td>Salvador</td>
-                                <td>R$ 15,00</td>
-                                <td>Em análise</td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>

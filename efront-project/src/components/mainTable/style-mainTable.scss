@@ -1,4 +1,4 @@
-.boxMainTable{
+.boxMainTable {
     background-color: white;
     padding: 30px;
     border-radius: 10px;
@@ -10,16 +10,20 @@
         color: #272727;
     }
 
-    .table{
+    img {
+        width: 100px;
+    }
+
+    .table {
         width: 100%;
 
-        th{
+        th {
             font-size: 1rem;
             color: #272727;
             border: none;
         }
 
-        td{
+        td {
             font-size: 0.87rem;
             color: #6A6969;
             border: none;
