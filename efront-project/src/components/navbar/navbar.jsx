@@ -12,9 +12,7 @@ import ArrowLeft from '../../assets/arrow-left.svg';
 import LogoMini from '../../assets/logo_e.png';
 
 
-export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(true);
-
+export default function Navbar({ isOpen, setIsOpen }) {
     const toggleSider = () => {
         setIsOpen(!isOpen);
     };

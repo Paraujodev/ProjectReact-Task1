@@ -9,7 +9,7 @@ nav {
     min-height: 600px;
     position: relative;
     box-shadow: 5px 5px 10px #0000ff82;
-    transition: width 0.5s ease;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 
     ul {
         li {

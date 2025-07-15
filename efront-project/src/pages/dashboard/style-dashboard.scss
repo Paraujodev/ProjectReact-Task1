@@ -1,13 +1,21 @@
-
-.dashboard{
+.dashboard {
     width: 100%;
     height: 100vh;
     display: flex;
 
-    .mycontent{
+    .mycontent {
         width: calc(100% - 120px);
         height: 100vh;
         margin: 0 40px;
+        transition: width 0.3s ease;
+
+        &.menu-open {
+            width: calc(100% - 270px);
+        }
+
+        &.menu-closed {
+            width: calc(100% - 120px);
+        }
 
         .overflow {
             height: calc(100vh - 200px);
@@ -17,49 +25,48 @@
 
 
 
-        .classGraphic{
+        .classGraphic {
             display: flex;
             justify-content: space-between;
 
-            .graphicOne{
+            .graphicOne {
                 width: 100%;
                 height: 100%;
                 margin-bottom: 20px;
             }
 
-            .tableOne{
+            .tableOne {
                 width: 100%;
                 margin-bottom: 20px;
             }
         }
 
-        .contentBox{
+        .contentBox {
             width: 100%;
             border-radius: 10px;
         }
     }
 
-    @media (width <= 943px) {
+    @media (width <=943px) {
         .mycontent {
             margin: 0;
         }
     }
 
-    @media (width <= 768px) {
+    @media (width <=768px) {
         .mycontent {
             width: calc(100% - 122px);
             margin: 0;
         }
     }
 
-    @media(width <= 425px) {
+    @media(width <=425px) {
 
         .mycontent {
             .overflow {
                 height: calc(100vh - 150px);
                 min-height: 0;
             }
-        } 
+        }
     }
 }
-
