@@ -3,6 +3,7 @@
     padding: 30px;
     border-radius: 10px;
 
+
     h2 {
         margin-bottom: 20px;
         font-size: 20px;
@@ -11,23 +12,29 @@
     }
 
     img {
-        width: 100px;
+        width: 70px;
+        align-items: center;
     }
 
-    .table {
-        width: 100%;
 
-        th {
-            font-size: 1rem;
-            color: #272727;
-            border: none;
-        }
+}
 
-        td {
-            font-size: 0.87rem;
-            color: #6A6969;
-            border: none;
-        }
+.imgLoading {
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+
+    th {
+        font-size: 1rem;
+        color: #272727;
+        border: none;
     }
 
+    td {
+        font-size: 0.87rem;
+        color: #6A6969;
+        border: none;
+    }
 }

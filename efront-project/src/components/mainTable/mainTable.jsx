@@ -19,13 +19,30 @@ export default function MainTable() {
                 }
                 return response.json();
             })
+
             .then((dataTable) => {
-                setUsers(dataTable);
+                const sortedData = dataTable.sort((a, b) => {
+                    const [diaA, mesA, anoA] = a.data.split('/');
+                    const [diaB, mesB, anoB] = b.data.split('/');
+
+                    const dataA = new Date(anoA, mesA - 1, diaA);
+                    const dataB = new Date(anoB, mesB - 1, diaB);
+
+                    return dataB - dataA; 
+                });
+
+                setUsers(sortedData);
                 setLoadingTable(false);
-                //console.log(dataTable);
             })
+
+            // .then((dataTable) => {
+            //     setUsers(dataTable);
+            //     setLoadingTable(false);
+            //     //console.log(dataTable);
+            // })
+
             .catch((error) => {
-                console.error("Erro ao buscar dados:", error);
+                //console.error("Erro ao buscar dados:", error);
                 setError(error.message);
                 setLoadingTable(false);
             });
@@ -35,15 +52,17 @@ export default function MainTable() {
         <div className='boxMainTable'>
             <h2>Histórico de compradores</h2>
 
-            {loadingTable && <img src={Loading} alt="Carregando..." />}
-            {error && <p style={{ color: 'red' }}>Erro: {error}</p>}
+            <div className='imgLoading'>
+                {loadingTable && <img src={Loading} alt="Carregando..." />}
+                {error && <p style={{ color: 'red' }}>Erro: {error}</p>}
+            </div>
 
             {!loadingTable && !error && (
                 <div className="table-responsive">
                     <table className="table">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>Usuário</th>
                                 <th>Data</th>
                                 <th>Nome</th>
                                 <th>Localização</th>
@@ -52,8 +71,8 @@ export default function MainTable() {
                             </tr>
                         </thead>
                         <tbody>
-                            {users.slice(0,10).map((usuario) => (
-                                <tr key={usuario.id}>
+                            {users.map((usuario) => (
+                                <tr>
                                     <td>{usuario.pedido}</td>
                                     <td>{usuario.data}</td>
                                     <td>{usuario.cliente}</td>
@@ -62,7 +81,7 @@ export default function MainTable() {
                                     <td>{usuario.situação}</td>
                                 </tr>
                             ))}
-                            
+
                         </tbody>
                     </table>
                 </div>
