@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 import Loading from '../../assets/loading.gif';
 
 export default function TransactionsHistory() {
-  const [dados, setDados] = useState([]);
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [totaisPorDia, setTotaisPorDia] = useState([]);
+  const [totalsByDay, setTotalsByDay] = useState([]);
 
   useEffect(() => {
     fetch("https://my.api.mockaroo.com/historico_receitas.json", {
@@ -18,53 +18,53 @@ export default function TransactionsHistory() {
       return response.json();
     })
     .then((data) => {
-      setDados(data);
+      setData(data);
       setLoading(false);
     })
     .catch((error) => {
       console.error("Erro ao buscar dados:", error);
-      setLoading(false);
+      setLoading(true);
     });
   }, []);
 
   useEffect(() => {
-    if (dados.length === 0) return;
+    if (data.length === 0) return;
 
-    const hoje = new Date();
-    const diasSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+    const today = new Date();
+    const weekdays = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
 
-    const ultimos3Dias = [...Array(3)].map((_, i) => {
-      const data = new Date(hoje);
-      data.setDate(hoje.getDate() - (i + 1));
+    const last3Days  = [...Array(3)].map((_, i) => {
+      const date = new Date(today);
+      date.setDate(today.getDate() - (i + 1));
       return {
-        data,
-        nomeDia: diasSemana[data.getDay()],
+        date,
+        dayName: weekdays[date.getDay()],
         total: 0
       };
     });
 
-    dados.forEach(item => {
-      const [dia, mes, ano] = item.data_pagamento.split('.').map(Number);
-      const dataVenda = new Date(ano, mes - 1, dia);
+    data.forEach(item => {
+      const [day, month, year] = item.data_pagamento.split('.').map(Number);
+      const paymentDate = new Date(year, month - 1, day);
 
-      ultimos3Dias.forEach(d => {
+      last3Days.forEach(d => {
         if (
-          dataVenda.getDate() === d.data.getDate() &&
-          dataVenda.getMonth() === d.data.getMonth() &&
-          dataVenda.getFullYear() === d.data.getFullYear()
+          paymentDate.getDate() === d.date.getDate() &&
+          paymentDate.getMonth() === d.date.getMonth() &&
+          paymentDate.getFullYear() === d.date.getFullYear()
         ) {
           d.total += item.valor;
         }
       });
     });
 
-    const totaisArray = ultimos3Dias.map(d => ({
-      dia: d.nomeDia,
-      valor: d.total.toFixed(2).replace('.', ',')
+    const formattedTotals = last3Days.map(d => ({
+      day: d.dayName,
+      value: d.total.toFixed(2).replace('.', ',')
     }));
 
-    setTotaisPorDia(totaisArray);
-  }, [dados]);
+    setTotalsByDay(formattedTotals);
+  }, [data]);
 
   return (
     <div className='spaceGraphicTransactions'>
@@ -75,11 +75,11 @@ export default function TransactionsHistory() {
             <img src={Loading} alt="loading" />
           </div>
         ) : (
-          <div className='dataTrasactions'>
-            {totaisPorDia.map((item, index) => (
+          <div className='dataTransactions'>
+            {totalsByDay.map((item, index) => (
               <div key={index} className='transactionsInform'>
-                <span>{item.dia}</span>
-                <span>R$ {item.valor}</span>
+                <span>{item.day}</span>
+                <span>R$ {item.value}</span>
               </div>
             ))}
           </div>
