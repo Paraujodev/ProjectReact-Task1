@@ -29,7 +29,7 @@ nav {
         }
     }
 
-    .imageLogoE{
+    .imageLogoE {
         transition: 0.5s;
     }
 
@@ -62,6 +62,11 @@ nav {
             filter: brightness(0) saturate(100%) invert(59%) sepia(36%) saturate(7380%) hue-rotate(229deg) brightness(100%) contrast(99%);
         }
 
+        span {
+            color: #9E6EFE;
+        }
+
+
     }
 
     .divider {
@@ -83,6 +88,10 @@ nav {
 
             img {
                 filter: brightness(0) saturate(100%) invert(18%) sepia(100%) saturate(3150%) hue-rotate(351deg) brightness(82%) contrast(131%);
+            }
+
+            span {
+                color: #ec0000;
             }
         }
     }

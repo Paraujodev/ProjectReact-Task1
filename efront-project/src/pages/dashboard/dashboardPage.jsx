@@ -10,14 +10,14 @@ import Resumebox from '../../components/resumeBox/resumeBox.jsx';
 
 
 export default function Dashboard() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isMenuOpen, setMenuOpen] = useState(true);
 
   return (
     <div className="dashboard">
       <div className="navBar">
-        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Navbar isOpen={isMenuOpen} setIsOpen={setMenuOpen} />
       </div>
-      <div className={`mycontent ${isOpen ? 'menu-open' : 'menu-closed'}`}>
+      <div className={`mycontent ${isMenuOpen ? 'menu-open' : 'menu-closed'}`}>
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12">

@@ -1,5 +1,5 @@
 import './style-navbar.scss'
-import React, { useState } from 'react';
+import React, {} from 'react';
 import Logo from '../../assets/logo.svg';
 import Transations from '../../assets/cart.svg';
 import DashboardImage from '../../assets/grid.svg';
@@ -23,7 +23,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
                 <a href="/"> <img className='imageLogoE' src={isOpen ? Logo : LogoMini} alt="Logo" />
                 </a>
                 <button className={`toggle-btn ${isOpen ? 'rotated' : ''}`} onClick={toggleSider}>
-                    <img src={Arrow} alt="Toggle menu"/>
+                    <img src={Arrow} alt="Toggle menu" />
                 </button>
             </div>
             <ul>
