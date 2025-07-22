@@ -5,7 +5,7 @@ import Graphic from '../../components/graphic/graphic.jsx';
 import TransactionsHistory from '../../components/transactionsHistory/transactionsHistory.jsx';
 import Header from '../../components/header/header.jsx';
 import MainTable from '../../components/mainTable/mainTable.jsx';
-import Resumebox from '../../components/resumeBox/resumeBox.jsx';
+import ResumeboxOne from '../../components/resumeBox/resumeBox.jsx';
 
 
 
@@ -37,16 +37,16 @@ export default function Dashboard() {
             </div>
             <div className="row">
               <div className="col-lg-3">
-                <Resumebox/>
+                <ResumeboxOne/>
               </div>
               <div className="col-lg-3">
-                <Resumebox/>
+                <ResumeboxOne/>
               </div>
               <div className="col-lg-3">
-                <Resumebox/>
+                <ResumeboxOne/>
               </div>
               <div className="col-lg-3">
-                <Resumebox/>
+                <ResumeboxOne/>
               </div>
             </div>
             <div className="row">

@@ -3,7 +3,7 @@
     height: 100vh;
     display: flex;
 
-.mycontent {
+    .mycontent {
         height: 100vh;
         margin: 0 40px;
         transition: width 0.3s ease;
@@ -49,6 +49,10 @@
     @media (width <=943px) {
         .mycontent {
             margin: 0;
+
+            .overflow {
+                overflow-x: scroll;
+            }
         }
     }
 
@@ -57,6 +61,7 @@
             width: calc(100% - 122px);
             margin: 0;
         }
+
     }
 
     @media(width <=425px) {
