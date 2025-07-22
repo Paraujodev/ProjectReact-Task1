@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './style-dashboard.scss';
 import Navbar from '../../components/navbar/navbar.jsx';
 import Graphic from '../../components/graphic/graphic.jsx';
@@ -9,12 +10,14 @@ import ResumeboxOne from '../../components/resumeBox/resumeBox.jsx';
 
 
 export default function Dashboard() {
+  const [isMenuOpen, setMenuOpen] = useState(true);
+
   return (
     <div className="dashboard">
       <div className="navBar">
-        <Navbar />
+        <Navbar isOpen={isMenuOpen} setIsOpen={setMenuOpen} />
       </div>
-      <div className="mycontent">
+      <div className={`mycontent ${isMenuOpen ? 'menu-open' : 'menu-closed'}`}>
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12">
