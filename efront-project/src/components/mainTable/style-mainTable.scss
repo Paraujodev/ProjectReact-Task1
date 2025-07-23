@@ -16,25 +16,31 @@
         align-items: center;
     }
 
+    .table-responsive {
+        overflow-y: scroll;
+        height: 500px;
 
+        .table {
+            width: 100%;
+
+            th {
+                font-size: 1rem;
+                color: #272727;
+                border: none;
+                position: sticky;
+                top: 0;
+            }
+
+            td {
+                font-size: 0.87rem;
+                color: #6A6969;
+                border: none;
+            }
+        }
+    }
 }
 
 .imgLoading {
     text-align: center;
 }
 
-.table {
-    width: 100%;
-
-    th {
-        font-size: 1rem;
-        color: #272727;
-        border: none;
-    }
-
-    td {
-        font-size: 0.87rem;
-        color: #6A6969;
-        border: none;
-    }
-}
