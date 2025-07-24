@@ -35,14 +35,7 @@ export default function MainTable() {
                 setLoadingTable(false);
             })
 
-            // .then((dataTable) => {
-            //     setUsers(dataTable);
-            //     setLoadingTable(false);
-            //     //console.log(dataTable);
-            // })
-
             .catch((error) => {
-                //console.error("Erro ao buscar dados:", error);
                 setError(error.message);
                 setLoadingTable(false);
             });
@@ -59,10 +52,10 @@ export default function MainTable() {
 
             {!loadingTable && !error && (
                 <div className="table-responsive">
-                    <table className="table">
+                    <table className="table table-striped">
                         <thead>
                             <tr>
-                                <th>Usuário</th>
+                                <th>Pedido</th>
                                 <th>Data</th>
                                 <th>Nome</th>
                                 <th>Localização</th>
