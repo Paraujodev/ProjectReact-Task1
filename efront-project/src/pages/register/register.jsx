@@ -1,6 +1,6 @@
 import "./style.css"
 
-// components/register.jsx
+
 function Register() {
     return (
         <>
@@ -11,19 +11,39 @@ function Register() {
                 </header>
 
                 <form>
-                    <input type="text" placeholder="Nome Completo *" required/>
-                    <input type="text" placeholder="Profissão" />
-                    <input type="email" placeholder="E-mail *" required />
-                    <input type="password" placeholder="Senha *" required />
-                    <input type="password" placeholder="Confirmação de senha *" required />
+                    <label>
+                        <span>Nome completo *</span>
+                        <input type="text" required />
+                    </label>
+
+                    <label>
+                        <span>Profissão</span>
+                        <input type="text"  />
+                    </label>
+
+                    <label>
+                        <span>E-mail *</span>
+                        <input type="email" required />
+                    </label>
+
+                    <label>
+                        <span>Senha *</span>
+                        <input type="password" required />
+                    </label>
+
+                    <label>
+                        <span>Confirmação de senha *</span>
+                        <input type="password" required />
+                    </label>
+
                     <label className="checkbox-label">
                         <input type="checkbox" required />
-                        Eu concordo com os <a href="">Termos de Política de Privacidade</a> *
+                        Eu concordo com os <a>Termos de Política de Privacidade</a> *
                     </label>
-                    <button type="submit">Cadastrar</button>
+                    <button className="button-cadastro" type="submit">Cadastrar</button>
                 </form>
                 <button className="button-login" type="submit">Já tem uma conta? <b>Faça Login.</b>
-                    
+
                 </button>
             </div>
         </>
@@ -32,3 +52,4 @@ function Register() {
 }
 
 export default Register;
+
