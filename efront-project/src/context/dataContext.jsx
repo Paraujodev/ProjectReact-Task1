@@ -8,7 +8,7 @@ export function DataProvider({ children }) {
 
   useEffect(() => {
     fetch("https://my.api.mockaroo.com/historico_receitas.json", {
-      headers: { "X-API-Key": "b6269e10" }
+      headers: { "X-API-Key": "420e6730" }
     })
       .then(res => res.json())
       .then(json => {

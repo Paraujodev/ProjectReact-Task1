@@ -8,10 +8,6 @@ export default function Resumebox(props) {
             <div className="resumeBox">
                 <h3>{props.name}</h3>
                 <span>{props.value}</span>
-                <div>
-                    <img src={props.src} alt={props.alt} />
-                    <span>Teste de impressão</span>
-                </div>
             </div>
         </div>
     )
