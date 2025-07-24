@@ -1,38 +1,15 @@
 import './style-graphic.scss'
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef} from 'react';
+import { useData } from "../../context/dataContext";
 import Chart from 'chart.js/auto';
 import Loading from '../../assets/loading.gif';
 
 export default function Graphic () {
-
+    const { data, loading } = useData();
     const canvasRef = useRef(null);
-    const [dados, setDados] = useState([]);
-    const [loading, setLoading] = useState(true); 
-
+    
     useEffect(() => {
-        fetch("https://my.api.mockaroo.com/historico_receitas.json", {
-            headers: {
-                "X-API-Key": "b6269e10"
-            }
-        })
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error("Erro na requisição");
-            }
-            return response.json();
-        })
-        .then((data) => {
-            setDados(data);
-            setLoading(false); 
-        })
-        .catch((error) => {
-            console.error("Erro ao buscar dados:", error);
-            setLoading(true); 
-        });
-    }, []);
-
-    useEffect(() => {
-        if (dados.length === 0) return;
+        if (data.length === 0) return;
 
         const totaisPorMes = {
             Jan: 0,
@@ -43,9 +20,13 @@ export default function Graphic () {
             Jun: 0,
         };
 
-        dados.forEach(item => {
+        const filteredData = data.filter(item =>
+            item.situacao === "Aprovada"
+        );
+
+        filteredData.forEach(item => {
             // eslint-disable-next-line no-unused-vars
-            const [dia, mes] = item.data_pagamento.split('.');
+            const [dia, mes] = item.data.split('/');
 
             const meses = {
                 '01': 'Jan',
@@ -102,7 +83,7 @@ export default function Graphic () {
         });
 
         return () => chart.destroy();
-    }, [dados]);
+    }, [data]);
 
     return (
         <div className='spaceGraphicTransactions'>

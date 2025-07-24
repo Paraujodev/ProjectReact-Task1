@@ -1,31 +1,12 @@
 import './style-transactionsHistory.scss';
 import { useEffect, useState } from 'react';
+import { useData } from "../../context/dataContext";
 import Loading from '../../assets/loading.gif';
 
 export default function TransactionsHistory() {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [totalsByDay, setTotalsByDay] = useState([]);
 
-  useEffect(() => {
-    fetch("https://my.api.mockaroo.com/historico_receitas.json", {
-      headers: {
-        "X-API-Key": "b6269e10"
-      }
-    })
-    .then((response) => {
-      if (!response.ok) throw new Error("Erro na requisição");
-      return response.json();
-    })
-    .then((data) => {
-      setData(data);
-      setLoading(false);
-    })
-    .catch((error) => {
-      console.error("Erro ao buscar dados:", error);
-      setLoading(true);
-    });
-  }, []);
+  const { data, loading } = useData();
+  const [totalsByDay, setTotalsByDay] = useState([]);
 
   useEffect(() => {
     if (data.length === 0) return;
@@ -43,8 +24,12 @@ export default function TransactionsHistory() {
       };
     });
 
-    data.forEach(item => {
-      const [day, month, year] = item.data_pagamento.split('.').map(Number);
+    const filteredData = data.filter(item =>
+      item.situacao === "Aprovada" || item.situacao === "Em análise"
+    );
+
+    filteredData.forEach(item => {
+      const [day, month, year] = item.data.split('/').map(Number);
       const paymentDate = new Date(year, month - 1, day);
 
       last3Days.forEach(d => {
