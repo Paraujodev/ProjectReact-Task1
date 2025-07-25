@@ -21,7 +21,7 @@ export default function MainTable() {
 
   return (
     <div className='boxMainTable'>
-      <h2>Histórico de compradores</h2>
+      <h2>Histórico de vendas</h2>
 
       { loading ?
         <div className="loading">
@@ -36,6 +36,7 @@ export default function MainTable() {
                 <th>Status</th>
                 <th>Data</th>
                 <th>Cliente</th>
+                <th>Contato</th>
                 <th>Localização</th>
                 <th>Itens</th>
                 <th>Valor</th>
@@ -49,6 +50,7 @@ export default function MainTable() {
                   <td>{usuario.status}</td>
                   <td>{usuario.data}</td>
                   <td>{usuario.cliente}</td>
+                  <td>{usuario.contato}</td>
                   <td>{usuario.localizacao}</td>
                   <td>{usuario.itens}</td>
                   <td>{Number(usuario.valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
