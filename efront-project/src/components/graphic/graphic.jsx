@@ -21,7 +21,7 @@ export default function Graphic () {
         };
 
         const filteredData = data.filter(item =>
-            item.situacao === "Aprovada"
+            item.status === "Entregue" && item.pagamento === "Aprovado"
         );
 
         filteredData.forEach(item => {

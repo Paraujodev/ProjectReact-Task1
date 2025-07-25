@@ -25,7 +25,8 @@ export default function TransactionsHistory() {
     });
 
     const filteredData = data.filter(item =>
-      item.situacao === "Aprovada" || item.situacao === "Em análise"
+      item.pagamento === "Aprovado" 
+      
     );
 
     filteredData.forEach(item => {

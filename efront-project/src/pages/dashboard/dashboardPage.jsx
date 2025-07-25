@@ -11,7 +11,7 @@ import ResumeboxOne from '../../components/resumeBox/resumeBox.jsx';
 
 export default function Dashboard() {
   const [isMenuOpen, setMenuOpen] = useState(true);
-  
+
   return (
     <div className="dashboard">
       <div className="navBar">
@@ -37,16 +37,16 @@ export default function Dashboard() {
             </div>
             <div className="row">
               <div className="col-lg-3">
-                <ResumeboxOne name={"Total de vendas"}/>
+                <ResumeboxOne name="Total de vendas"/>
               </div>
               <div className="col-lg-3">
-                <ResumeboxOne name={"Total líquido"}/>
+                <ResumeboxOne name="Total líquido"/>
               </div>
               <div className="col-lg-3">
-                <ResumeboxOne name={"Compras canceladas"}/>
+                <ResumeboxOne name="Compras canceladas"/>
               </div>
               <div className="col-lg-3">
-                <ResumeboxOne name={"Reembolsos"}/>
+                <ResumeboxOne name="Reembolsos"/>
               </div>
             </div>
             <div className="row">

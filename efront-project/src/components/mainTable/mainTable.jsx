@@ -23,38 +23,55 @@ export default function MainTable() {
     <div className='boxMainTable'>
       <h2>Histórico de compradores</h2>
 
-      <div className='imgLoading'>
-        {loading && <img src={Loading} alt="Carregando..." />}
-      </div>
-
-      {!loading && (
+      { loading ?
+        <div className="loading">
+          <img src={Loading} alt="loading" />
+        </div>
+      :
         <div className="table-responsive">
           <table className="table table-striped">
             <thead>
               <tr>
                 <th>Pedido</th>
+                <th>Status</th>
                 <th>Data</th>
-                <th>Nome</th>
+                <th>Cliente</th>
                 <th>Localização</th>
+                <th>Itens</th>
                 <th>Valor</th>
-                <th>Situação</th>
+                <th>Pagamento</th>
               </tr>
             </thead>
             <tbody>
               {users.map((usuario) => (
-                <tr key={usuario.pedido}>
+                <tr>
                   <td>{usuario.pedido}</td>
+                  <td>{usuario.status}</td>
                   <td>{usuario.data}</td>
                   <td>{usuario.cliente}</td>
                   <td>{usuario.localizacao}</td>
-                  <td>R$ {usuario.valor}</td>
-                  <td>{usuario.situacao}</td>
+                  <td>{usuario.itens}</td>
+                  <td>{Number(usuario.valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                  <td>
+                    <div className="payment-status">
+                      <span
+                        className={`status-dot ${
+                          usuario.pagamento === 'Aprovado'
+                            ? 'status-aprovado'
+                            : usuario.pagamento === 'Pendente'
+                            ? 'status-pendente'
+                            : 'status-reprovado'
+                        }`}
+                      ></span>
+                      {usuario.pagamento}
+                    </div>
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-      )}
+      }
     </div>
   );
 }
