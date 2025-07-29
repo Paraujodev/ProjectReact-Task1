@@ -16,7 +16,7 @@ function Register() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         if (password !== confirmPassword) {
             setPasswordError("As senhas não coincidem.");
             return;
@@ -85,7 +85,7 @@ function Register() {
                                         required
                                     />
                                     <i
-                                        className={`fa-solid ${showPassword ? "fa-eye-slash" : "fa-eye"} toggle-password-icon`}
+                                        className={`fa-solid ${showPassword ? "fa-eye" : "fa-eye-slash"} toggle-password-icon`}
                                         onClick={() => setShowPassword(!showPassword)}
                                     ></i>
                                 </div>
@@ -101,14 +101,14 @@ function Register() {
                                         required
                                     />
                                     <i
-                                        className={`fa-solid ${showConfirmPassword ? "fa-eye-slash" : "fa-eye"} toggle-password-icon`}
+                                        className={`fa-solid ${showConfirmPassword ? "fa-eye" : "fa-eye-slash"} toggle-password-icon`}
                                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                                     ></i>
                                 </div>
+                                {passwordError && (
+                                    <p className="error-message">{passwordError}</p>
+                                )}
                             </label>
-                            {passwordError && (
-                                <p className="error-message">{passwordError}</p>
-                            )}
 
                             <label className="checkbox-label">
                                 <input
@@ -120,9 +120,9 @@ function Register() {
                                 Eu concordo com os <a>Termos de Política de Privacidade</a> *
                             </label>
                             <button className="button-cadastro" type="submit">Cadastrar</button>
-                            <button className="button-login" type="submit">Já tem uma conta? <b>Faça Login.</b>
-                            </button>
                         </form>
+                            <button className="button-login" type="button">Já tem uma conta?<b>Faça Login.</b>
+                            </button>
                     </div>
                 </div>
             </div>
