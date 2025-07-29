@@ -6,7 +6,7 @@
 }
 
 .container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,11 +20,13 @@
         font-size: 32px;
         color: #280274;
         margin-bottom: 10px;
+        justify-self: center;
     }
 
     .subtitle {
         font-size: 24px;
         color: #797582;
+        justify-self: center;
     }
 
     form {
@@ -134,6 +136,53 @@
     b {
         &:hover {
             text-decoration: underline;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        justify-content: flex-start;
+        padding-top: 40px;
+
+        .title {
+            font-size: 24px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+        }
+
+        form {
+            gap: 30px;
+
+            span {
+                font-size: 16px;
+            }
+
+            input,
+            .password-wrapper input {
+                font-size: 16px;
+            }
+
+            .toggle-password-icon {
+                font-size: 16px;
+            }
+
+            .checkbox-label {
+                font-size: 16px;
+                flex-direction: column;
+            }
+        }
+
+        .button-cadastro {
+            font-size: 14px;
+        }
+
+        .button-login {
+            font-size: 14px;
+            text-align: center;
         }
     }
 }
