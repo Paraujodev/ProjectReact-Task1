@@ -37,16 +37,16 @@ export default function Dashboard() {
             </div>
             <div className="row">
               <div className="col-lg-3">
-                <ResumeboxOne/>
+                <ResumeboxOne name="Total de vendas"/>
               </div>
               <div className="col-lg-3">
-                <ResumeboxOne/>
+                <ResumeboxOne name="Total líquido"/>
               </div>
               <div className="col-lg-3">
-                <ResumeboxOne/>
+                <ResumeboxOne name="Compras canceladas"/>
               </div>
               <div className="col-lg-3">
-                <ResumeboxOne/>
+                <ResumeboxOne name="Reembolsos"/>
               </div>
             </div>
             <div className="row">
