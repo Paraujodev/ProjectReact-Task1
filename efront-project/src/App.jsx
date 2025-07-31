@@ -9,7 +9,7 @@ function App() {
   return (
     <DataProvider>
       <div className="backgroud-page">
-        <Login />
+        <Login/>
       </div>
     </DataProvider>
   )
