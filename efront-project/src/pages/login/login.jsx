@@ -27,50 +27,51 @@ function Register() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <header>
-                            <img src={Logo} alt="" />
-                        </header>
+                        <div className="register-container login">
+                            <header>
+                                <img src={Logo} alt="" />
+                            </header>
+                            <form onSubmit={handleSubmit}>
+                                <label>
+                                    <span>E-mail *</span>
+                                    <div className="password-wrapper">
+                                        <i className="fa-solid fa-envelope"></i>
+                                        <input
+                                            type="email"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            required
+                                        />
+                                    </div>
+                                </label>
 
-                        <form onSubmit={handleSubmit}>
-                            <label>
-                                <span>E-mail *</span>
-                                <div className="password-wrapper">
-                                    <i className="fa-solid fa-envelope icon"></i>
-                                    <input className="password-wrapper-email"
-                                        type="email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        required
-                                    />
-                                </div>
-                            </label>
+                                <label>
+                                    <span>Senha *</span>
+                                    <div className="password-wrapper">
+                                        <i className="fa-solid fa-lock"></i>
+                                        <input
+                                            type={showConfirmPassword ? "text" : "password"}
+                                            value={confirmPassword}
+                                            onChange={(e) => setConfirmPassword(e.target.value)}
+                                            required
+                                        />
+                                        <i
+                                            className={`fa-solid ${showConfirmPassword ? "fa-eye" : "fa-eye-slash"} toggle-password-icon`}
+                                            onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                                        ></i>
+                                    </div>
+                                    <p className="forget-password">Esqueci a senha</p>
+                                </label>
+                                {passwordError && (
+                                    <p className="error-message">{passwordError}</p>
+                                )}
 
-                            <label>
-                                <span>Senha *</span>
-                                <div className="password-wrapper">
-                                    <i className="fa-solid fa-lock icon"></i>
-                                    <input
-                                        type={showConfirmPassword ? "text" : "password"}
-                                        value={confirmPassword}
-                                        onChange={(e) => setConfirmPassword(e.target.value)}
-                                        required
-                                    />
-                                    <i
-                                        className={`fa-solid ${showConfirmPassword ? "fa-eye" : "fa-eye-slash"} toggle-password-icon`}
-                                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                                    ></i>
-                                </div>
-                                <p className="forget-password">Esqueci a senha</p>
-                            </label>
-                            {passwordError && (
-                                <p className="error-message">{passwordError}</p>
-                            )}
-
-                            <button className="button-cadastro" type="submit">Entrar</button>
-                        </form>
-                        <button className="button-login" type="submit">Ainda não tem conta? <b>Cadastre-se.</b>
-
-                        </button>
+                                <button className="button-cadastro" type="submit">Entrar</button>
+                            </form>
+                            <button className="button-login" type="submit">
+                                Ainda não tem conta? <b>Cadastre-se.</b>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
