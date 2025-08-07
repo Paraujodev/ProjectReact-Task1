@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./style.scss"
+import { useNavigate } from "react-router-dom";
 
 
 function Register() {
+    const navigate = useNavigate();
     const [fullName, setFullName] = useState("");
     const [profession, setProfession] = useState("");
     const [email, setEmail] = useState("");
@@ -33,7 +35,13 @@ function Register() {
         setAgreeTerms(false);
 
         console.log("Formulário enviado!");
+        
+
     };
+
+    function onSeeLoginClick() {
+        navigate("/");
+    }
 
     return (
         <div className="image-background">
@@ -121,7 +129,7 @@ function Register() {
                                 </label>
                                 <button className="button-cadastro" type="submit">Cadastrar</button>
                             </form>
-                            <button className="button-login" type="button">
+                            <button onClick={onSeeLoginClick} className="button-login" type="submit">
                                 Já tem uma conta?<b>Faça Login.</b>
                             </button>
                         </div>
