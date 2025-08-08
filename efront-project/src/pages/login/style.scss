@@ -1,0 +1,23 @@
+.register-container.login {
+    padding: 25px 0;
+
+    header {
+        padding-bottom: 20px;
+    }
+
+    .forget-password {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    i.fa-envelope, i.fa-lock {
+        font-size: 25px;
+        margin-right: 10px;
+    }
+}

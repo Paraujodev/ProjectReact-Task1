@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.image-background {
+    background-image: url(../../assets/container_login.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+    .register-container {
+        padding: 80px 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+
+        header {
+            padding-bottom: 100px;
+        }
+
+        .title {
+            font-size: 32px;
+            color: #280274;
+            margin-bottom: 15px;
+            justify-self: center;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #797582;
+            justify-self: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            span {
+                font-family: Poppins;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 100%;
+            }
+
+            .password-wrapper {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                border-bottom: 2px solid #9E6EFE;
+                padding-bottom: 4px;
+            }
+
+            .password-wrapper input {
+                flex: 1;
+                border: none;
+                outline: none;
+                font-size: 18px;
+                background: transparent;
+                color: #272727;
+                margin: 0;
+            }
+
+            .toggle-password-icon {
+                font-size: 18px;
+                cursor: pointer;
+                padding-left: 8px;
+            }
+
+            input {
+                width: 100%;
+                border: none;
+                border-bottom: 2px solid #9E6EFE;
+                outline: none;
+                font-size: 18px;
+                background: transparent;
+                color: #272727;
+                padding: 10px 0;
+            }
+
+            .checkbox-label {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 18px;
+                white-space: nowrap;
+                accent-color: #9E6EFE;
+
+                a {
+                    color: #280274;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: #9E6EFE;
+                    }
+                }
+            }
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+
+        .button-cadastro {
+            width: 100%;
+            max-width: 350px;
+            height: 44px;
+            border-radius: 12px;
+            border: 3px solid #9E6EFE;
+            background: transparent;
+            align-self: center;
+            font-size: 16px;
+
+            &:hover {
+                background-color: #9E6EFE;
+                color: #fff;
+            }
+
+            &:active {
+                transform: scale(0.97);
+                background-color: #8656e6;
+            }
+        }
+
+        .button-login {
+            margin-top: 80px;
+            border: none;
+            background: transparent;
+            display: flex;
+            justify-self: center;
+
+            b {
+                margin-left: 5px;
+
+                &:hover {
+                    text-decoration: underline;
+
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .register-container {
+        justify-content: flex-start;
+        padding-top: 40px;
+
+        .title {
+            font-size: 24px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+        }
+
+        form {
+            gap: 30px;
+
+            span {
+                font-size: 16px;
+            }
+
+            input,
+            .password-wrapper input {
+                font-size: 16px;
+            }
+
+            .toggle-password-icon {
+                font-size: 16px;
+            }
+
+            .checkbox-label {
+                font-size: 16px;
+                flex-direction: column;
+            }
+        }
+
+        .button-cadastro {
+            font-size: 14px;
+        }
+
+        .button-login {
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
