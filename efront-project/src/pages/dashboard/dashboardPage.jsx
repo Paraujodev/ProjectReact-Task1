@@ -6,57 +6,71 @@ import TransactionsHistory from '../../components/transactionsHistory/transactio
 import Header from '../../components/header/header.jsx';
 import MainTable from '../../components/mainTable/mainTable.jsx';
 import ResumeboxOne from '../../components/resumeBox/resumeBox.jsx';
+import PageModal from '../../components/modal/pageModal.jsx';
 
 
 
 export default function Dashboard() {
   const [isMenuOpen, setMenuOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  return (
-    <div className="dashboard">
-      <div className="navBar">
-        <Navbar isOpen={isMenuOpen} setIsOpen={setMenuOpen} />
-      </div>
-      <div className={`mycontent ${isMenuOpen ? 'menu-open' : 'menu-closed'}`}>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-12">
-              <Header />
-            </div>
-          </div>
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  const confirmLogout = () => {
+    
+    setIsModalOpen(false);
+  }
+
+    return (
+      <div className="dashboard">
+        <div className="navBar">
+          <Navbar isOpen={isMenuOpen} setIsOpen={setMenuOpen}
+            onOpenModal={openModal} />
         </div>
-        <div className='overflow'>
+
+        <PageModal isOpen={isModalOpen} onClose={closeModal} onConfirm={confirmLogout} />
+
+        <div className={`mycontent ${isMenuOpen ? 'menu-open' : 'menu-closed'}`}>
           <div className="container-fluid">
             <div className="row">
-              <div className="col-md-6">
-                <Graphic />
-              </div>
-              <div className="col-md-6">
-                <TransactionsHistory />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-3">
-                <ResumeboxOne name="Total de vendas"/>
-              </div>
-              <div className="col-lg-3">
-                <ResumeboxOne name="Total líquido"/>
-              </div>
-              <div className="col-lg-3">
-                <ResumeboxOne name="Compras canceladas"/>
-              </div>
-              <div className="col-lg-3">
-                <ResumeboxOne name="Reembolsos"/>
-              </div>
-            </div>
-            <div className="row">
               <div className="col-md-12">
-                <MainTable/> 
+                <Header />
+              </div>
+            </div>
+          </div>
+          <div className='overflow'>
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-md-6">
+                  <Graphic />
+                </div>
+                <div className="col-md-6">
+                  <TransactionsHistory />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-lg-3">
+                  <ResumeboxOne name="Total de vendas" />
+                </div>
+                <div className="col-lg-3">
+                  <ResumeboxOne name="Total líquido" />
+                </div>
+                <div className="col-lg-3">
+                  <ResumeboxOne name="Compras canceladas" />
+                </div>
+                <div className="col-lg-3">
+                  <ResumeboxOne name="Reembolsos" />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-12">
+                  <MainTable />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }

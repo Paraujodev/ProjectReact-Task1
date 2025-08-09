@@ -11,10 +11,14 @@ import Arrow from '../../assets/arrow.svg';
 import ArrowLeft from '../../assets/arrow-left.svg';
 import LogoMini from '../../assets/logo_e.png';
 
-
-export default function Navbar({ isOpen, setIsOpen }) {
+export default function Navbar({ isOpen, setIsOpen, onOpenModal }) {
     const toggleSider = () => {
         setIsOpen(!isOpen);
+    };
+
+    const openModal = () => {
+        console.log("Abrindo modal"); 
+        setIsModalOpen(true);
     };
 
     return (
@@ -55,9 +59,10 @@ export default function Navbar({ isOpen, setIsOpen }) {
                 </li>
                 <div className='logofPage'>
                     <li>
-                        <a href="LogofPage"> <img src={Logof} alt='logo desconectar' />
-                            <button className='buttonLogof'>Desconectar</button>
-                        </a>
+                        <button className="logout-button" onClick={onOpenModal}>
+                            <img src={Logof} alt='logo desconectar' />
+                            <span className='buttonLogof' >Desconectar</span>
+                        </button>
                     </li>
                 </div>
             </ul>

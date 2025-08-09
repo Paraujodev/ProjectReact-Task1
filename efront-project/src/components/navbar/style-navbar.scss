@@ -100,7 +100,6 @@ nav {
         }
 
         button {
-            margin-left: 12px;
             background: none;
             border: none
         }
@@ -140,6 +139,9 @@ nav {
                         width: auto;
                         transition: opacity 0.5s ease, width 0.5s ease;
                     }
+                }
+                span {
+                    margin-left: 12px;
                 }
 
             }
