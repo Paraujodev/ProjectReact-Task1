@@ -55,7 +55,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
                 </li>
                 <div className='logofPage'>
                     <li>
-                        <a href="Logof"> <img src={Logof} alt='logo desconectar' />
+                        <a href="LogofPage"> <img src={Logof} alt='logo desconectar' />
                             <button className='buttonLogof'>Desconectar</button>
                         </a>
                     </li>
