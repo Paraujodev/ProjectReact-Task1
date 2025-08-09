@@ -93,6 +93,16 @@ nav {
             span {
                 color: #ec0000;
             }
+
+            button {
+                color: #ec0000;
+            }
+        }
+
+        button {
+            margin-left: 12px;
+            background: none;
+            border: none
         }
     }
 
@@ -131,11 +141,13 @@ nav {
                         transition: opacity 0.5s ease, width 0.5s ease;
                     }
                 }
+
             }
 
             img {
                 width: 22px;
             }
+
         }
     }
 
@@ -184,6 +196,12 @@ nav {
                 width: 0;
                 overflow: hidden;
                 transition-delay: 0.2s;
+            }
+
+            .buttonLogof {
+                display: none;
+                transition: background-color 1.3s ease, transform 1.3s ease;
+                transition-delay: 1.2s;
             }
         }
     }

@@ -1,5 +1,5 @@
 import './style-navbar.scss'
-import React, {} from 'react';
+import React, { } from 'react';
 import Logo from '../../assets/logo.svg';
 import Transations from '../../assets/cart.svg';
 import DashboardImage from '../../assets/grid.svg';
@@ -55,12 +55,11 @@ export default function Navbar({ isOpen, setIsOpen }) {
                 </li>
                 <div className='logofPage'>
                     <li>
-                        <a href="/logof"> <img src={Logof} alt='logo desconectar' />
-                            <span>Desconectar</span>
+                        <a href="Logof"> <img src={Logof} alt='logo desconectar' />
+                            <button className='buttonLogof'>Desconectar</button>
                         </a>
                     </li>
                 </div>
-
             </ul>
         </nav>
     );
