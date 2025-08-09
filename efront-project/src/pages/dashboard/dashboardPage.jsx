@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './style-dashboard.scss';
 import Navbar from '../../components/navbar/navbar.jsx';
 import Graphic from '../../components/graphic/graphic.jsx';
