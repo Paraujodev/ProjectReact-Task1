@@ -1,4 +1,3 @@
-import ImageModal from "../../assets/background-image-modal.jpg"
 import './styleModal.scss';
 import IconClose from '../../assets/close.png'
 
