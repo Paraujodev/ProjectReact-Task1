@@ -1,5 +1,6 @@
 import ImageModal from "../../assets/background-image-modal.jpg"
 import './styleModal.scss';
+import IconClose from '../../assets/close.png'
 
 export default function PageModal({ isOpen, onClose, onConfirm }) {
     if (!isOpen) return null;
@@ -8,7 +9,7 @@ export default function PageModal({ isOpen, onClose, onConfirm }) {
         <div className="modal-overlay">
             <div className="modal-container">
                 <button className="close-btn" onClick={onClose} aria-label="Fechar modal">
-                    &times;
+                    <img src={IconClose} alt="Fechar"/>
                 </button>
 
                 <h2>Confirmar Logout</h2>

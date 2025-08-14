@@ -16,10 +16,10 @@ export default function Navbar({ isOpen, setIsOpen, onOpenModal }) {
         setIsOpen(!isOpen);
     };
 
-    const openModal = () => {
-        console.log("Abrindo modal"); 
-        setIsModalOpen(true);
-    };
+    // const openModal = () => {
+    //     console.log("Abrindo modal"); 
+    //     setIsModalOpen(true);
+    // };
 
     return (
         <nav className={isOpen ? "open" : "close"}>
